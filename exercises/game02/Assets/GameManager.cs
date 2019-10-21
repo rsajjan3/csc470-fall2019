@@ -44,8 +44,6 @@ public class GameManager : MonoBehaviour
 				this.cubeObj[row, col] = Instantiate(this.cubePrefab, pos + new Vector3(0, 3.3f, 0), Quaternion.identity);
 
 				CellScript cs = cellObj.AddComponent<CellScript>(); 
-				cs.row = row;
-				cs.col = col;
 				cs.value = Random.Range(0, 2); //0 or 1
 				cs.updateColor();
 

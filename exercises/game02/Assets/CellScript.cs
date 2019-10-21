@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CellScript : MonoBehaviour
-{
-	public int row { get; set; }
-	
-	public int col { get; set; }
-	
+{	
 	public int value { get; set; }
 	
 	private Renderer rend;
@@ -15,8 +11,6 @@ public class CellScript : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		this.row = -1;
-		this.col = -1;
 	}
 
     // Update is called once per frame
