@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 870d6acb480404199ab836bf0ed6d410
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - portrait: {instanceID: 0}
+  - rend: {instanceID: 0}
+  - catFab: {fileID: 7252643836160952132, guid: 4646d1aeb3c064720b96e98aae460045,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

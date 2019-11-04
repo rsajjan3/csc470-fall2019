@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 1d768e470afdf4c88abce7ee6bc21dac
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - talkBox: {instanceID: 0}
+  - talkText: {instanceID: 0}
+  - actionSelectToggleGroup: {instanceID: 0}
+  - selectedPanel: {instanceID: 0}
+  - nameText: {instanceID: 0}
+  - portraitImage: {instanceID: 0}
+  - meterFG: {instanceID: 0}
+  - healthMeterObject: {instanceID: 0}
+  - catFab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
