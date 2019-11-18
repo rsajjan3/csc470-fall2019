@@ -400,4 +400,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e13a0fadaec54d48beac382bc883e9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: EndGame
