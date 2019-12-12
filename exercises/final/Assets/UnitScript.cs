@@ -20,7 +20,7 @@ public class UnitScript : MonoBehaviour
 	{
 		selected = false;
 		name = "Hank Hill";
-		initTime = 30f; //Seconds
+		initTime = Random.Range(45.0f, 90.0f);
 		timeLeft = initTime;
 
 		GameObject gmObj = GameObject.Find("GameManagerObject");

@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: dec018c9a863c40ba8155a6485e1388b
   - enabled: 1
-    path: Assets/Scenes/ClickOnUnitsPlusUI.unity
-    guid: 931164efc729f4181a85fa29963aeed1
+    path: Assets/Scenes/ClickOnUnitsPlusUI 1.unity
+    guid: 4cb3467ba7bb54c64ae566d8d9671b1a
   - enabled: 1
     path: Assets/Scenes/EndGame.unity
     guid: 57c4f4321c24c427f8200aee26c11ab2

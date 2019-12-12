@@ -25,8 +25,12 @@ public class GameManager : MonoBehaviour
 	// We will move this object around and turn it on and off (done in UnitScript OnMouse function).
 	public GameObject timerObject;
 	public GameObject explosion;
+	public GameObject beerCan;
 	public AudioSource audioSource;
 	private AudioClip[] soundClips;
+	private GameObject[] cubeObjs;
+	private GameObject[] moveCubess;
+	private bool canMove;
 
 	private int attackCount;
 	private void playAudioClip()
@@ -39,18 +43,43 @@ public class GameManager : MonoBehaviour
 	void Start()
 	{
 		attackCount = 0;
+
 		soundClips = Resources.LoadAll<AudioClip>("Sounds");
 		playAudioClip();
-		//StartCoroutine(GetRequest("http://api.icndb.com/jokes/random/5"));
-		//InvokeRepeating("rainDogs", 1, 0.5f);
+
+		cubeObjs = GameObject.FindGameObjectsWithTag("cube");
+		canMove = true;
 	}
 	void attack()
 	{
+		moveCubes();
 		attackCount++;
-		if(attackCount % 3 == 0) playAudioClip(); //Play audio clip every 3 attacks
-        Vector3 position = selectedUnit.transform.position + Vector3.up * 1.5f + selectedUnit.transform.forward * 3.0f;
-        GameObject explode = Instantiate(explosion, position, selectedUnit.transform.rotation);
-        Destroy(explode, 3);
+		if(attackCount % 10 == 0) playAudioClip(); //Play audio clip every 10 attacks
+        Vector3 position = selectedUnit.transform.position + selectedUnit.transform.forward;
+        GameObject can = Instantiate(beerCan, position, selectedUnit.transform.rotation);
+        Destroy(can, 3);
+	}
+
+	void moveCubes() //Can make map more difficult or easier to move arround
+	{
+		if(canMove)
+		{
+			moveCubess = new GameObject[10];
+			for(int i = 0; i < moveCubess.Length; i++)
+			{
+				moveCubess[i] = cubeObjs[Random.Range(0, cubeObjs.Length)];
+				moveCubess[i].transform.position = moveCubess[i].transform.position + new Vector3(0, 5, 0); //Move cube 5 units up
+			}
+			canMove = false;
+		}
+		else
+		{
+			for(int i = 0; i < moveCubess.Length; i++)
+			{
+				moveCubess[i].transform.position = moveCubess[i].transform.position - new Vector3(0, 5, 0); //Move cube 5 units down
+			}
+			canMove = true;
+		}
 	}
 	
 	// Update is called once per frame

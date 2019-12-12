@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e4a5498a2e34c978f31196be960047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameScene: ClickOnUnitsPlusUI
+  newGameScene: ClickOnUnitsPlusUI 1
 --- !u!1 &52493295
 GameObject:
   m_ObjectHideFlags: 0
